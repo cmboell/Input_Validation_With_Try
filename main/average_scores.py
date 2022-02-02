@@ -18,13 +18,55 @@ first_name = input('Please enter your first name: ')
 last_name = input('Please enter your last name: ')
 
 # prompt user for input/ this displays prompt and takes input
-age = int(input('Enter your age: '))
+try:
+    age = int(input('Enter your age: '))
+    if age >= 0:
+        print('Valid age', end=', ')
+    else:
+        print('invalid')
+except:
+    age = 0
+    print('Age invalid', end=', ')
+finally:
+    print('Now enter your scores')
 
 # prompts user for test scores/ they display prompt and take input
-first_test_score = int(input('Enter first test score: '))
-second_test_score = int(input('Enter second test score: '))
-third_test_score = int(input('Enter third test score: '))
-
+# first test score try for input validation
+try:
+    first_test_score = int(input('Enter first test score: '))
+    if first_test_score >= 0:
+        print('Score recorded', end=', ')
+    else:
+        print('invalid')
+except:
+    first_test_score = 0
+    print('no score recorded', end=',d ')
+finally:
+    print('Next score')
+# input for second score and try for input validation
+try:
+    second_test_score = int(input('Enter second test score: '))
+    if second_test_score >= 0:
+        print('Score recorded', end=', ')
+    else:
+        print('invalid')
+except:
+    second_test_score = 0
+    print('no score recorded', end=', ')
+finally:
+    print('Next score')
+# input for test 3 and try input validation
+try:
+    third_test_score = input('Enter third test score: ')
+    if third_test_score >= 0:
+        print('Score recorded', end=', ')
+    else:
+        print('invalid')
+except:
+    third_test_score = 0
+    print('no score recorded', end=', ')
+finally:
+    print('Next score')
 
 # variable to hold average test score out of all 3 scores using a constant from constants file
 average_grade = (first_test_score + second_test_score + third_test_score) / constants.NUMBER_OF_TESTS
@@ -33,9 +75,28 @@ average_grade = (first_test_score + second_test_score + third_test_score) / cons
 print(f'{last_name.capitalize()}, {first_name.capitalize()} Age: {age} Average Grade: {average_grade: 5.2f}')
 
 """"
-observed output for cOLBY bOeLl 33 89 98 100 :
-Boell, Colby Age: 33 average grade  95.67
+Tests: 
+1.)                                    
+Please enter your first name: t
+Please enter your last name: t
+Enter your age: t
+Age invalid, Now enter your scores
+Enter first test score: t
+no score recorded, Next score
+Enter second test score: t
+no score recorded, Next score
+Enter third test score: t
+no score recorded,d Next score
+T, T Age: 0 Average Grade:  0.00
 
-observed output for lisa kellihan 40 90 70 80 :
-Kellihan, Lisa Age: 40 Average Grade:  80.00
+2.)
+Enter your age: 33
+Valid age, Now enter your scores
+Enter first test score: 45
+Score recorded, Next score
+Enter second test score: 76
+Score recorded, Next score
+Enter third test score: 89
+no score recorded, Next score
+Boell, Colby Age: 33 Average Grade:  40.33
 """
