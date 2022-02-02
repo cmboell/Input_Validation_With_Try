@@ -27,6 +27,8 @@ try:
 except:
     age = 0
     print('Age invalid', end=', ')
+else:
+    print('Basic information recorded')
 finally:
     print('Now enter your scores')
 
@@ -90,13 +92,16 @@ no score recorded,d Next score
 T, T Age: 0 Average Grade:  0.00
 
 2.)
+Please enter your first name: colby
+Please enter your last name: BoEll
 Enter your age: 33
-Valid age, Now enter your scores
-Enter first test score: 45
+Valid age, Basic information recorded
+Now enter your scores
+Enter first test score: 67
 Score recorded, Next score
-Enter second test score: 76
+Enter second test score: 88
 Score recorded, Next score
-Enter third test score: 89
+Enter third test score: 92
 no score recorded, Next score
-Boell, Colby Age: 33 Average Grade:  40.33
+Boell, Colby Age: 33 Average Grade:  51.67
 """
