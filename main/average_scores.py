@@ -17,7 +17,7 @@ first_name = input('Please enter your first name: ')
 # prompt user input for last name / this displays prompt and takes the input
 last_name = input('Please enter your last name: ')
 
-# prompt user for input/ this displays prompt and takes input
+# prompt user for input/ this displays prompt and takes input, try input validation for age
 try:
     age = int(input('Enter your age: '))
     if age >= 0:
