@@ -23,7 +23,8 @@ try:
     if age >= 0:
         print('Valid age', end=', ')
     else:
-        print('invalid')
+        age = 0
+        print('Invalid, recorded as 0')
 except:
     age = 0
     print('Age invalid', end=', ')
@@ -39,7 +40,8 @@ try:
     if first_test_score >= 0:
         print('Score recorded', end=', ')
     else:
-        print('invalid')
+        first_test_score = 0
+        print('invalid, recorded as 0')
 except:
     first_test_score = 0
     print('no score recorded', end=',d ')
@@ -51,7 +53,8 @@ try:
     if second_test_score >= 0:
         print('Score recorded', end=', ')
     else:
-        print('invalid')
+        second_test_score = 0
+        print('invalid, recorded as 0')
 except:
     second_test_score = 0
     print('no score recorded', end=', ')
@@ -63,7 +66,8 @@ try:
     if third_test_score >= 0:
         print('Score recorded', end=', ')
     else:
-        print('invalid')
+        third_test_score = 0
+        print('invalid, recorded as 0')
 except:
     third_test_score = 0
     print('no score recorded', end=', ')
