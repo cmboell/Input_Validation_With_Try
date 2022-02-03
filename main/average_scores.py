@@ -59,7 +59,7 @@ finally:
     print('Next score')
 # input for test 3 and try input validation
 try:
-    third_test_score = input('Enter third test score: ')
+    third_test_score = int(input('Enter third test score: '))
     if third_test_score >= 0:
         print('Score recorded', end=', ')
     else:
